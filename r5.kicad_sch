@@ -2067,7 +2067,7 @@
     (uuid c51c544a-6d8c-4025-ae83-dd938a7cc67b)
   )
   (junction (at 87.63 64.77) (diameter 0) (color 0 0 0 0)
-    (uuid cafce2a7-0443-418f-9e3e-30fcee33aa4d)
+    (uuid cbec48c2-cb16-46fb-9dde-7d017630d5b7)
   )
   (junction (at 290.83 102.87) (diameter 0) (color 0 0 0 0)
     (uuid cbf50c12-a503-447b-af8f-48efaa9be9b2)
@@ -2886,7 +2886,13 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 25d99397-2ec6-47ac-85f1-4ea7ed7929bc)
   )
-  (text "10.8V under voltage cutoff (3S LiPo)" (at 43.18 134.62 0)
+  (text "Output voltage 4.98V\nVO = 0.8V*(1 + R13/(R14+R15)) "
+    (at 81.28 138.43 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 6faabb38-fcca-4559-ae2e-b727104cd56f)
+  )
+  (text "10.66V under voltage cutoff (3S LiPo)\nVul = (R10/R11+1)*1.279"
+    (at 40.64 138.43 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 915011c8-201a-49fa-ac77-3d0b81467e09)
   )
@@ -4104,7 +4110,7 @@
   )
 
   (symbol (lib_id "_r5:LMZ22005") (at 68.58 104.14 0) (unit 1)
-    (in_bom no) (on_board yes) (dnp no)
+    (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-000060ba6bff)
     (property "Reference" "U10" (at 68.58 92.329 0)
       (effects (font (size 1.27 1.27)))
@@ -4116,6 +4122,9 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 60.96 96.52 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "LCSC Part #" "C2865843" (at 68.58 104.14 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid dc1a00d5-7e26-4507-9d20-ede3e4b7b4d3))
@@ -7134,31 +7143,6 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 46.99 64.77 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 00000000-0000-0000-0000-000061045605)
-    (property "Reference" "#PWR0205" (at 46.99 71.12 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 47.117 69.1642 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 46.99 64.77 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 46.99 64.77 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 0ef377b6-2b44-4de7-85de-6c6f7aacf1a8))
-    (instances
-      (project "r5"
-        (path "/7141c11d-0c81-438d-ad8c-6c0ffa292856"
-          (reference "#PWR0205") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "power:+BATT") (at 46.99 45.72 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-0000610472b7)
@@ -7205,31 +7189,6 @@
       (project "r5"
         (path "/7141c11d-0c81-438d-ad8c-6c0ffa292856"
           (reference "X11") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 87.63 64.77 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 00000000-0000-0000-0000-00006106742d)
-    (property "Reference" "#PWR0214" (at 87.63 71.12 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 87.757 69.1642 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 87.63 64.77 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 87.63 64.77 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid a4d7d30c-795e-413a-8b4a-1905b78ef937))
-    (instances
-      (project "r5"
-        (path "/7141c11d-0c81-438d-ad8c-6c0ffa292856"
-          (reference "#PWR0214") (unit 1)
         )
       )
     )
@@ -8124,7 +8083,7 @@
   (symbol (lib_id "Switch:SW_SPDT") (at 364.49 82.55 0) (unit 1)
     (in_bom no) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2713ecdd-ae71-49e3-a1df-764b8ea2c561)
-    (property "Reference" "SW70" (at 364.49 73.66 0)
+    (property "Reference" "S70" (at 364.49 73.66 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "SW_SPDT" (at 364.49 76.2 0)
@@ -8142,7 +8101,7 @@
     (instances
       (project "r5"
         (path "/7141c11d-0c81-438d-ad8c-6c0ffa292856"
-          (reference "SW70") (unit 1)
+          (reference "S70") (unit 1)
         )
       )
     )
@@ -8168,6 +8127,31 @@
       (project "r5"
         (path "/7141c11d-0c81-438d-ad8c-6c0ffa292856"
           (reference "#PWR0219") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GNDPWR") (at 87.63 64.77 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 289efa83-56e8-4009-b586-61eb3d6ee8fc)
+    (property "Reference" "#PWR051" (at 87.63 69.85 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GNDPWR" (at 87.7316 68.6816 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 87.63 66.04 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 87.63 66.04 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid c52f28cc-e3f6-4829-9a92-0099ea55e799))
+    (instances
+      (project "r5"
+        (path "/7141c11d-0c81-438d-ad8c-6c0ffa292856"
+          (reference "#PWR051") (unit 1)
         )
       )
     )
@@ -8277,7 +8261,7 @@
     (property "Reference" "R11" (at 42.418 128.3716 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "13k7" (at 42.418 130.683 0)
+    (property "Value" "3k" (at 42.418 130.683 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 38.862 129.54 90)
@@ -8286,7 +8270,7 @@
     (property "Datasheet" "~" (at 40.64 129.54 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC Part #" "C17448" (at 40.64 129.54 0)
+    (property "LCSC Part #" "C17661" (at 40.64 129.54 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "2" (uuid 10df3dcb-3d9f-4a5d-b2d7-a6f071ba1f78))
@@ -8354,7 +8338,7 @@
   (symbol (lib_id "Switch:SW_SPDT") (at 306.07 158.75 0) (unit 1)
     (in_bom no) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 50c0a9bb-92ec-4d45-bd9d-4b9e2f5d4894)
-    (property "Reference" "SW60" (at 306.07 149.86 0)
+    (property "Reference" "S60" (at 306.07 149.86 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "SW_SPDT" (at 306.07 152.4 0)
@@ -8372,7 +8356,7 @@
     (instances
       (project "r5"
         (path "/7141c11d-0c81-438d-ad8c-6c0ffa292856"
-          (reference "SW60") (unit 1)
+          (reference "S60") (unit 1)
         )
       )
     )
@@ -8465,7 +8449,7 @@
   (symbol (lib_id "Switch:SW_SPDT") (at 194.31 255.27 0) (unit 1)
     (in_bom no) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 611a67d3-064b-46ca-89bc-edf7d5506748)
-    (property "Reference" "SW80" (at 194.31 246.38 0)
+    (property "Reference" "S80" (at 194.31 246.38 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "SW_SPDT" (at 194.31 248.92 0)
@@ -8483,7 +8467,7 @@
     (instances
       (project "r5"
         (path "/7141c11d-0c81-438d-ad8c-6c0ffa292856"
-          (reference "SW80") (unit 1)
+          (reference "S80") (unit 1)
         )
       )
     )
@@ -8520,7 +8504,7 @@
   (symbol (lib_id "Switch:SW_SPDT") (at 40.64 110.49 0) (unit 1)
     (in_bom no) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 682daea9-76ca-44e6-bc8e-3b66f50bf9c8)
-    (property "Reference" "SW10" (at 40.64 101.6 0)
+    (property "Reference" "S10" (at 40.64 101.6 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "SW_SPDT" (at 40.64 104.14 0)
@@ -8538,7 +8522,7 @@
     (instances
       (project "r5"
         (path "/7141c11d-0c81-438d-ad8c-6c0ffa292856"
-          (reference "SW10") (unit 1)
+          (reference "S10") (unit 1)
         )
       )
     )
@@ -9019,6 +9003,31 @@
     )
   )
 
+  (symbol (lib_id "power:GNDPWR") (at 46.99 64.77 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid c074da32-2ffe-4b19-a146-8f5d3f82f21f)
+    (property "Reference" "#PWR052" (at 46.99 69.85 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GNDPWR" (at 47.0916 68.6816 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 46.99 66.04 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 46.99 66.04 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 2bd2de24-2f10-4aaa-8b7c-2d1992cbd1e1))
+    (instances
+      (project "r5"
+        (path "/7141c11d-0c81-438d-ad8c-6c0ffa292856"
+          (reference "#PWR052") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "74xx:74LS540") (at 397.51 107.95 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c26bffc5-fc6f-4e66-a404-81c8684caac1)
@@ -9244,7 +9253,7 @@
     (property "Reference" "R10" (at 42.418 120.7516 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "102k" (at 42.418 123.063 0)
+    (property "Value" "22k" (at 42.418 123.063 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 38.862 121.92 90)
@@ -9253,7 +9262,7 @@
     (property "Datasheet" "~" (at 40.64 121.92 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC Part #" "C40372" (at 40.64 121.92 0)
+    (property "LCSC Part #" "C17560" (at 40.64 121.92 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "2" (uuid 8648cacc-038a-4c41-8c9b-60724414f67f))
