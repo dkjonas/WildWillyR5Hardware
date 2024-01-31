@@ -55,7 +55,11 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "courtyards_overlap|101699999|58500001|336b7f5c-2b2a-489f-bccd-67c9f5a39b34|e2ca7683-539d-4fc1-9eed-cfe6207ba268",
+        "courtyards_overlap|101699999|63200001|cdf4e9ca-3f7e-4773-995c-de62e65d6943|e2ca7683-539d-4fc1-9eed-cfe6207ba268",
+        "courtyards_overlap|83279999|57400001|5656d0d7-1e21-4d67-8900-bd56eff10f50|d4a16d6d-2e24-446e-a695-8b3ab9a70f74"
+      ],
       "meta": {
         "filename": "board_design_settings.json",
         "version": 2
