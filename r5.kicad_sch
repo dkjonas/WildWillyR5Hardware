@@ -4110,7 +4110,7 @@
   )
 
   (symbol (lib_id "_r5:LMZ22005") (at 68.58 104.14 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom no) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-000060ba6bff)
     (property "Reference" "U10" (at 68.58 92.329 0)
       (effects (font (size 1.27 1.27)))
