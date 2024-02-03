@@ -97,6 +97,8 @@
     (stroke (width 0.05) (type solid)) (layer "Edge.Cuts") (tstamp 18afd810-1ea1-4f60-8280-9b72302fb4b9))
   (fp_line (start 7.1 0.9) (end 6.4 0.9)
     (stroke (width 0.05) (type solid)) (layer "Edge.Cuts") (tstamp f820f12d-740b-4a85-933f-4bbcd90841ce))
+  (fp_rect (start -7.747 -10.3378) (end 7.747 7.8486)
+    (stroke (width 0.05) (type default)) (fill none) (layer "F.CrtYd") (tstamp 0cf8e414-2aac-4c65-aad8-6ec7b72d5b6d))
   (fp_circle (center -5.6 8.5) (end -5.45 8.5)
     (stroke (width 0.3) (type solid)) (fill none) (layer "F.Fab") (tstamp 51e7d315-7c58-4b4f-bf1c-6ae0e8e6b752))
   (pad "" thru_hole oval (at -6.75 0 90) (size 2.4 1.2) (drill oval 1.75 0.65) (layers "*.Cu" "*.Mask")

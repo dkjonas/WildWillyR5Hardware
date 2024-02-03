@@ -34,9 +34,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 1.0,
-          "height": 1.7,
-          "width": 1.7
+          "drill": 0.0,
+          "height": 0.5,
+          "width": 2.2
         },
         "silk_line_width": 0.12,
         "silk_text_italic": false,
@@ -45,7 +45,7 @@
         "silk_text_thickness": 0.15,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.254
+          "min_clearance": 0.508
         }
       },
       "diff_pair_dimensions": [
@@ -56,7 +56,10 @@
         }
       ],
       "drc_exclusions": [
-        "courtyards_overlap|83279999|57400001|5656d0d7-1e21-4d67-8900-bd56eff10f50|d4a16d6d-2e24-446e-a695-8b3ab9a70f74"
+        "copper_edge_clearance|98426910|128600000|e34c349e-3435-4956-b95b-49a3d471f811|e71d33e5-d877-42bc-b4c8-309326ec25a9",
+        "copper_edge_clearance|99626910|142100000|268e2d16-d43b-44f7-9990-8e3e0eee7711|6269bd99-29d8-4a6a-b80e-01623e6c5e66",
+        "lib_footprint_issues|99713860|95104140|b16e74c9-7ef5-4faa-b4f1-3c200b61534f|00000000-0000-0000-0000-000000000000",
+        "missing_courtyard|99720400|95097600|b16e74c9-7ef5-4faa-b4f1-3c200b61534f|00000000-0000-0000-0000-000000000000"
       ],
       "meta": {
         "filename": "board_design_settings.json",
@@ -66,7 +69,7 @@
         "annular_width": "error",
         "clearance": "error",
         "connection_width": "warning",
-        "copper_edge_clearance": "error",
+        "copper_edge_clearance": "warning",
         "copper_sliver": "warning",
         "courtyards_overlap": "error",
         "diff_pair_gap_out_of_range": "error",
@@ -87,12 +90,12 @@
         "lib_footprint_mismatch": "warning",
         "malformed_courtyard": "error",
         "microvia_drill_out_of_range": "error",
-        "missing_courtyard": "ignore",
+        "missing_courtyard": "warning",
         "missing_footprint": "warning",
         "net_conflict": "warning",
-        "npth_inside_courtyard": "ignore",
+        "npth_inside_courtyard": "warning",
         "padstack": "warning",
-        "pth_inside_courtyard": "ignore",
+        "pth_inside_courtyard": "warning",
         "shorting_items": "error",
         "silk_edge_clearance": "ignore",
         "silk_over_copper": "warning",
@@ -211,7 +214,9 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [],
+    "erc_exclusions": [
+      "power_pin_not_driven|2108200|1905000|af458966-83d2-40bc-bc75-a0185f8a2545|00000000-0000-0000-0000-000000000000|||"
+    ],
     "meta": {
       "version": 0
     },
