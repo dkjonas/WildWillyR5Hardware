@@ -2897,7 +2897,7 @@
     (uuid 915011c8-201a-49fa-ac77-3d0b81467e09)
   )
   (text "RPI has internal 1k8 pull-up on I2C-1,\nso most likely don't populate these two."
-    (at 311.15 138.43 0)
+    (at 311.15 245.11 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid e24aa8fc-0b47-40fa-9902-f054f8bb0738)
   )
